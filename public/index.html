@@ -1,0 +1,97 @@
+<!DOCTYPE html data-dpr="1">
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 强制刷新页面，清缓存 -->
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <link rel="stylesheet" href="./luckysheet/plugins/css/pluginsCss.css" />
+    <link rel="stylesheet" href="./luckysheet/plugins/plugins.css" />
+    <link rel="stylesheet" href="./luckysheet/css/luckysheet.css" />
+    <link rel="stylesheet" href="./luckysheet/assets/iconfont/iconfont.css" />
+    <script src="./luckysheet/plugins/js/plugin.js"></script>
+    <script src="./luckysheet/luckysheet.umd.js"></script>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/bpmn-js-properties-panel/dist/assets/properties-panel.css">
+    <link rel="stylesheet" href="https://unpkg.com/bpmn-js-properties-panel/dist/assets/element-templates.css"> -->
+    <title><%= VUE_APP_TITLE %></title>
+  </head>
+
+  <body>
+    <div id="app" class="aminui">
+      <div class="app-loading">
+        <div class="app-loading__logo">
+          <img src="<%= BASE_URL %>favicon.ico" />
+        </div>
+        <div class="app-loading__loader"></div>
+        <div class="app-loading__title">
+          <%= VUE_APP_TITLE %>
+        </div>
+      </div>
+      <style>
+        .app-loading {
+          position: absolute;
+          top: -200px;
+          left: 0px;
+          right: 0px;
+          bottom: 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background: #fff;
+        }
+
+        .app-loading__logo {
+          margin-bottom: 30px;
+        }
+
+        .app-loading__logo img {
+          width: 90px;
+          vertical-align: bottom;
+        }
+
+        .app-loading__loader {
+          position: relative;
+          box-sizing: border-box;
+          width: 40px;
+          height: 40px;
+          border: 3px solid #eee;
+          border-top-color: #86aff2;
+          border-radius: 50%;
+          animation: 0.5s loader linear infinite;
+        }
+
+        .app-loading__title {
+          font-size: 24px;
+          color: #eee;
+          margin-top: 30px;
+        }
+
+        [data-theme='dark'] .app-loading {
+          background: #222225;
+        }
+
+        [data-theme='dark'] .app-loading__loader {
+          border-top-color: #fff;
+        }
+
+        [data-theme='dark'] .app-loading__title {
+          color: #d0d0d0;
+        }
+
+        @keyframes loader {
+          0% {
+            transform: rotate(0deg);
+          }
+
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+      </style>
+    </div>
+  </body>
+</html>

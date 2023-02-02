@@ -1,0 +1,12 @@
+/*element主题配置 改变主题色变量 */
+/* Element Chalk Variables */
+// @import '../_global.scss';
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+/* element 样式表 */
+@import '~element-ui/packages/theme-chalk/src/index';
+
+/* 二次封装 样式表 */
+@import '~zl-element/src/theme-chalk/src/index';

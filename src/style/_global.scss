@@ -1,0 +1,34 @@
+/* ------------------ element ----------------- */
+$--color-primary: #ec7259 !default; // 主题色
+
+
+$--color-success: #00a870 !default;
+$--color-warning: #ff7d00 !default;
+$--color-danger: #ff7477 !default;
+$--color-info: #c3c3c3 !default;
+/* ------------------ element ----------------- */
+
+$--color-secondary: #eff7ff; // 辅色
+
+$--bg: #f2f5f8; // 背景色
+$--form-bg: #f2f3f5; //表单背景
+
+$--danger: #ff7477; //提示色及危险按钮
+$--font: #333; //标题及正文文字
+
+$--base-side-width: 200px; // 侧边栏
+$--base-side-width-hide: 50px; // 侧边栏 缩小
+$--base-top: 50px; // 顶部高度
+$--base-gap: 10px; //间距
+
+$--font-size_mobile: 24px; //字体大小
+$--font-size: 14px; //字体大小
+
+
+  //$----------------------------------------------------------------
+  // [Theme]
+ $--nav-check:#ebf3ff; // navMenu 选中时背景色
+  //[base color]  Generally, it is not modified
+ $--white: #fff;
+ $--black: #333;
+ $--gray: #ddd;

@@ -1,0 +1,359 @@
+@import './type/reset.scss'; //引入全局样式
+
+/* ----页面布局----begin */
+// 块
+.section {
+  background-color: #fff;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  margin: 10px 10px 0;
+  padding: 8px 15px;
+
+  &.next {
+    // margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+	&_bg{
+		margin: 10px 10px 0;
+	}
+}
+
+.section_title {
+  font-weight: 700;
+  font-size: 16px;
+  .bottom {
+    margin-bottom: $--base-gap;
+  }
+}
+
+.flex_column {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.flex_column_vh {
+  // 减去当前顶部高度
+  // height: calc(100% - $--base-top);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.flex_column_nh {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.flex_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex_e_center {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex_1 {
+  flex: 1;
+}
+
+.flex_1_auto {
+  flex: 1;
+  overflow: auto;
+}
+
+.flex_center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_a_center {
+  display: flex;
+  align-items: center;
+}
+
+.flex_wa_center {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex_b_center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cursor {
+  &.pointer{
+    cursor: pointer;
+  }
+  &.move {
+    cursor: move;
+  }
+  &.wait {
+    cursor: wait;
+  }
+  &.help {
+    cursor: help;
+  }
+  &.crosshair {
+    cursor: crosshair;
+  }
+}
+
+
+/* ----页面布局----begin */
+/*可公用自定义样式 begin*/
+.cursor {
+  &:hover {
+    opacity: 0.8;
+  }
+
+  cursor: pointer;
+}
+
+/*可公用自定义样式 end*/
+
+/*跳转链接begin*/
+.my_link {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #333333;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &_blue {
+    color: #2d76ec;
+  }
+
+  &_deep_blue {
+    color: #455b63;
+  }
+
+  &_yellow {
+    color: #ea8d00;
+  }
+}
+
+/*跳转链接end*/
+
+/* 自定义校验样式提示 */
+.error_tip {
+  color: $--danger;
+  font-size: 14px;
+  opacity: 1;
+}
+@mixin tip($color) {
+  color: $color;
+}
+@mixin tip_bg($color) {
+  background-color: $color;
+}
+.msg_tip {
+  color: $--color-info;
+  &.primary {
+    @include tip($--color-primary);
+  }
+  &.black {
+    @include tip($--font);
+  }
+
+  &.danger {
+    @include tip($--danger);
+  }
+
+  &.success {
+    @include tip($--color-success);
+  }
+  &.bg_success {
+    padding: 3px 6px;
+    @include tip($--color-success);
+    @include tip_bg(#e8ffea);
+  }
+  &.bg_warning {
+    padding: 3px 6px;
+    @include tip($--color-warning);
+    @include tip_bg(#ffcf8b);
+  }
+
+  &.warning {
+    @include tip($--color-warning);
+  }
+}
+
+.no_data {
+  color: #999;
+  padding: 10px;
+
+  &_center {
+    text-align: center;
+  }
+}
+
+/* 超出隐藏 begin*/
+.hide_text {
+  /* 设置文字超出隐藏 单行 */
+  /* max-width: 300px; */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+  &.line_one {
+    white-space: nowrap;
+  }
+
+  &.line_two {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+  }
+}
+
+/* 超出隐藏 end*/
+
+// 设置文字不可选中、不可复制
+.no_select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* ------------文字样式------------ e*/
+
+// 顶部搜索样式
+.my-search {
+  // 按钮组样式
+  &_group {
+    margin-right: 10px;
+    width: 280px;
+
+    .el-input--suffix > .el-input__inner {
+      width: 110px;
+      border-radius: 4px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-right: 0;
+    }
+
+    .el-input__inner {
+      width: 200px;
+    }
+
+    .el-input-group__prepend {
+      background-color: #fff;
+    }
+  }
+
+  &_select {
+    width: 160px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  &_input {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 160px;
+  }
+
+  &_datetime {
+    width: 240px;
+    margin-right: 10px;
+  }
+
+  &_switch {
+    margin-right: 10px;
+    white-space: nowrap;
+    display: flex;
+
+    .el-switch__label {
+      & > span {
+        line-height: 20px;
+      }
+    }
+  }
+
+  &_pickertime {
+    &.el-input__inner {
+      width: 240px;
+      margin-left: 8px;
+      margin-right: 10px;
+    }
+  }
+  &_datetime {
+    &.el-input__inner {
+      width: 360px;
+      margin-left: 8px;
+      margin-right: 10px;
+    }
+  }
+}
+
+/* ------------提示------------ begin*/
+@mixin round_before($color) {
+  &::before {
+    background-color: $color;
+  }
+}
+.round_tip {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  &::before {
+    position: absolute;
+    content: '';
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: $--color-info;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+  }
+  &.primary {
+    @include round_before($--color-primary);
+  }
+  &.success {
+    @include round_before($--color-success);
+  }
+  &.warning {
+    @include round_before($--color-warning);
+  }
+  &.danger {
+    @include round_before($--danger);
+  }
+}
+/* ------------提示------------ end*/
+
+// 设置文字选中样式
+::selection {
+  background: #0987db;
+  color: #fff;
+}
+
+@import './type/loading.scss'; //表单样式
+@import './type/scrollbar.scss'; //滚动条样式
+@import './type/table.scss'; //表格样式

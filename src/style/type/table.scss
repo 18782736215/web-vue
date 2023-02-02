@@ -1,0 +1,133 @@
+/* ------------element 表格样式 begin------------ */
+.el-table--border {
+  thead th {
+    padding: 2px 0;
+  }
+
+  tbody td {
+    padding: 3px 0;
+  }
+}
+
+/*解决表格不对齐*/
+body .el-table th.gutter {
+  display: table-cell !important;
+}
+
+// 修改element表格样式
+.el-table {
+  font-size: 14px;
+  th > .cell {
+    padding: 3px 0;
+    line-height: 23px;
+  }
+  .cell {
+    padding: 2px 3px;
+    line-height: 1.4;
+  }
+  // 设置表格行高
+  .el-table__cell {
+    padding: 4px 0;
+  }
+  // 修改表格单选样式
+  .el-table__body {
+    tr.current-row > td.el-table__cell {
+      background-color: #eff7ff;
+    }
+  }
+}
+
+.el-table__row {
+  &.row_del {
+    //表示被删除了的
+    .cell {
+      color: $--color-primary;
+    }
+  }
+
+  &.row_disable {
+    //表示禁用
+    .cell {
+      color: #999;
+    }
+  }
+
+  &.del_row_1 {
+    td {
+      background-color: #fff !important;
+
+      .cell::after {
+        position: absolute;
+        top: 19px;
+        left: 0;
+        content: '';
+        min-width: 101%;
+        border-top: 2px solid #e3e3e3;
+        z-index: 1;
+      }
+
+      &:nth-child(1) {
+        .cell::after {
+          position: absolute;
+          top: 18px;
+          left: 15px;
+          content: '';
+          min-width: 100%;
+          border-top: 2px solid #e3e3e3;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
+
+/* ------------表格样式 end------------ */
+
+/* 普通表格 begin*/
+// TODO 添加示例
+$borderColor: #f2f2f2; //边框颜色
+$fontColor:#333; // 文字颜色
+.table {
+  box-sizing: border-box;
+	color: $fontColor;
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+    border: 1px solid $borderColor;
+  }
+
+  thead th {
+    padding: 12px 0;
+    font-weight: normal;
+  }
+
+  tbody tr td {
+    padding: 10px 0px 10px 10px;
+    font-weight: normal;
+  }
+
+  tfoot tr td {
+    padding: 10px 0px 10px 10px;
+    font-weight: normal;
+  }
+
+  thead th,
+  tbody tr td,
+  tfoot tr td {
+    border: 1px solid $borderColor;
+  }
+
+  tr {
+    &:hover {
+      background-color: $borderColor;
+    }
+  }
+}
+
+.table .table_title {
+  color: $fontColor;
+  font-weight: 600;
+}
+/* 普通表格 :end*/

@@ -1,0 +1,15 @@
+/* pc端加载样式 begin*/
+.el-loading-spinner .path {
+  stroke: #83a6fa !important;
+}
+
+.el-loading-spinner .el-loading-text {
+  color: #999999 !important;
+}
+/* pc端加载样式 end*/
+
+/* 自定义颜色 nprogress */
+#nprogress .bar {
+  background: linear-gradient(to right, #f95e5a 5%, #ffac13 20%, #4bd863 70%);
+  height: 3px;
+}
